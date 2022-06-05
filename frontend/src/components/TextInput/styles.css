@@ -11,6 +11,13 @@ label{
 div{
   display: flex;
   align-items: center;
+  position: relative
+}
+
+.error-message{
+  position: absolute;
+  font-size: 1.5rem;
+  color: red;
 }
 
 @media screen and (max-width:1440px){
