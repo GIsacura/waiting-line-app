@@ -29,7 +29,6 @@ class ClientsService {
   async delete(id){
     const index1 = this.clients.line1.findIndex(client => client.id === id)
     const index2 = this.clients.line2.findIndex(client => client.id === id)
-    console.log(index1, index2)
 
     if(index1 === -1 && index2 === -1){
       throw boom.notFound('Client not found')

@@ -4,7 +4,8 @@ import AppContext from '../../context/AppContext';
 import './styles.css'
 
 const ClientCard = ({id, name}) => {
-  const {addClient1, addClient2, updateList } = useContext(AppContext)
+  const {addClient1, addClient2 } = useContext(AppContext)
+  let { updateList } = useContext(AppContext)
   const deleted = async () =>{
     const response1 = deleteClient(id)
     const response = await getClients()

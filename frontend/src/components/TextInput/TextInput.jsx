@@ -7,8 +7,10 @@ const TextInput = ({label, ...props}) => {
   return(
     <div>
       <label>{label}</label>
-      <input {...field} {...props}/> {/* Aca tambien podemos pasar el destructuring de las props para que si nosotros queremos cambiar el valor de las propiedades value, onChange y onBlur que le asigna Formik, se las pasamos por parametros al componente y el reasigna el valor */}
-      {meta.touched && meta.error ? <div className="error-message">{meta.error}</div> : null}
+      <section>
+        <input {...field} {...props}/> {/* Aca tambien podemos pasar el destructuring de las props para que si nosotros queremos cambiar el valor de las propiedades value, onChange y onBlur que le asigna Formik, se las pasamos por parametros al componente y el reasigna el valor */}
+        {meta.touched && meta.error ? <div className="error-message">{meta.error}</div> : null}
+      </section>
     </div>
   )
 }

@@ -20,7 +20,8 @@ const validate = (values) =>{
 }
 
 function FormContainer() {
-  const {addClient1, addClient2, updateList } = useContext(AppContext)
+  const {addClient1, addClient2 } = useContext(AppContext)
+  let { updateList } = useContext(AppContext)
   const submitForm = async values =>{
     addClient(values)
     const response = await getClients()
