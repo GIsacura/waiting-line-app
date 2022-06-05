@@ -7,15 +7,14 @@ import './index.css'
 
 
 function Home() {
-  const {line1, line2, addClient1, addClient2, updateList } = useContext(AppContext)
-
-  // console.log("state:",state)
+  const {line1, line2, addClient1, addClient2 } = useContext(AppContext)
 
   useEffect(() => async () => {
+    // Geting the list of clients from the api
     const response = await getClients()
     addClient1([...response.data.line1])
     addClient2([...response.data.line2])
-  },[updateList])
+  },[])
 
   return (
     <section className='App'>

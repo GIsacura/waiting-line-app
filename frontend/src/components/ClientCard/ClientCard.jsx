@@ -7,13 +7,17 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const ClientCard = ({id, name, order}) => {
   const {addClient1, addClient2 } = useContext(AppContext)
-  let { updateList } = useContext(AppContext)
+
   const deleted = async () =>{
+
+    //Function to delete a client from a list
     await deleteClient(id)
+
+    // Updating the list of clients
     const response = await getClients()
     addClient1([...response.data.line1])
     addClient2([...response.data.line2])
-    updateList = ''
+
   }
   return (
     <article>
