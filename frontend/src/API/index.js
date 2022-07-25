@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import AppContext from '../context/AppContext'
 import initialState from './useInitialState'
 
-const API_URL = 'http://localhost:3001/api/v1/'
+const API_URL = 'https://waiting-line-app-api.vercel.app/api/v1/'
 
 
 export const getClients = async () =>{
