@@ -8,7 +8,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json())
 
 const whiteList = [
-  'http://localhost:3000'
+  'https://waiting-line-app.vercel.app/'
 ]
 
 const options = {
