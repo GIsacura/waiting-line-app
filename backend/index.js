@@ -11,16 +11,17 @@ const whiteList = [
   'https://waiting-line-app.vercel.app/'
 ]
 
-const options = {
-  origin: (origin, callback) => {
-    if(whiteList.includes(origin) || !origin){
-      callback(null, true)
-    }else{
-      callback(new Error('no permitido'))
-    }
-  }
-}
-app.use(cors(options))
+// const options = {
+//   origin: (origin, callback) => {
+//     if(whiteList.includes(origin) || !origin){
+//       callback(null, true)
+//     }else{
+//       callback(new Error('no permitido'))
+//     }
+//   }
+// }
+// app.use(cors(options))
+app.use(cors())
 
 routerApi(app)
 app.use(logErrors)
